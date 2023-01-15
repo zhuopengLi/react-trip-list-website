@@ -3,7 +3,7 @@ import useFetch from './hooks/useFetch'
 
 export default function TripList() {
 
-    const [url, setUrl] = useState('https://different-rose-beanie.cyclic.app/trips')
+    const [url, setUrl] = useState('https://bright-tux.cyclic.app/trip-list')
 
     const { data: trips, isPending, error } = useFetch(url, {type: "GET"})
 
@@ -14,8 +14,8 @@ export default function TripList() {
                 <h2>Trip List</h2>
 
                 <div className="filter">
-                    <button onClick={() => setUrl("https://different-rose-beanie.cyclic.app/trips?loc=europe")}>Europe Trips</button>
-                    <button onClick={() => setUrl("https://different-rose-beanie.cyclic.app/trips")}>All Trips</button>
+                    <button onClick={() => setUrl("https://bright-tux.cyclic.app/trip-list?loc=europe")}>Europe Trips</button>
+                    <button onClick={() => setUrl("https://bright-tux.cyclic.app/trip-list")}>All Trips</button>
                 </div>
 
                 {isPending && <div className='pending'>Loading...</div>}
